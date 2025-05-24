@@ -1,0 +1,23 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "A simple quiz application",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "watch-ts": "tsc --watch",
+    "serve": "browser-sync start --server --files=\"dist/*.js,*.html,*.css\" --no-notify",
+    "dev": "concurrently \"npm:watch-ts\" \"npm:serve\"",
+    "start": "npm run build && npm run serve",
+    "setup": "npm install"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^8.2.0",
+    "http-server": "^14.0.0",
+    "typescript": "^4.5.0"
+  },
+  "dependencies": {
+    "quiz-app": "file:"
+  }
+}
